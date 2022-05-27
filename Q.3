@@ -1,0 +1,12 @@
+//Multiply two positive numbers without using * operator
+#include <stdio.h>
+int main()
+{
+    int num1,num2,i,result=0;
+	printf("enter two no.s to be multiplied");
+	scanf("%d%d",&num1,&num2);
+	for (i=1;i<=num2;i++)
+		result+=num1;
+	printf("product of %d and %d is:%d",num1,num2,result);
+return 0;
+}
