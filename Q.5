@@ -1,0 +1,19 @@
+//Program to find the sum of digits of a number until the sum is reduced to 1 digit. For example: 538769->38->11->2
+#include <stdio.h>
+int main()
+{
+long num,n,nes,sum;
+    printf("enter no.");
+    scanf("%ld",&num);
+    printf("%ld->",num);
+    do{
+        for(sum=0;num!=0;num/=10)
+        {
+            nes=num%10;
+            sum=sum+nes;
+        }
+        printf("%ld->",sum);
+        num=sum;
+    }while(num/10!=0);
+return 0;
+}
