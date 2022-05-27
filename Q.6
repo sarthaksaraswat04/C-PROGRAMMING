@@ -1,0 +1,62 @@
+//Write a currency program, that tells you how many number of 100, 50, 20, 10, 5, 2 and 1 Rs notes will be needed for a given amount of money. For example if the total amount is Rs 545 then five 100 Rs notes, two 20 Rs note and one 5 Rs note will be needed. This sort of program can be used in ATM machines
+#include <stdio.h>
+int main()
+{
+    int amt,choice,notes;
+    printf("enter amount:");
+    scanf("%d",&amt);
+    printf("enter note from which you want to begin:");
+    scanf("%d",&choice);
+    switch(choice)
+    {
+        default:
+            {
+                printf("enter only correct choice\n");
+                break;
+            }
+        case 100:
+            {
+                notes=amt/100;
+                printf("no of 100 rs notes%d\n",notes);
+                amt%=100;
+            }
+        case 50:
+            {
+                notes=amt/50;
+                printf("no of 50 rs notes%d\n",notes);
+                amt%=50;
+            }
+        case 20:
+            {
+                notes=amt/20;
+                printf("no of 20 rs notes%d\n",notes);
+                amt%=20;
+            }
+        case 10:
+            {
+                notes=amt/10;
+                printf("no of 10 rs notes%d\n",notes);
+                amt%=10;
+            }
+        case 5:
+            {
+                notes=amt/5;
+                printf("no of 5 rs notes%d\n",notes);
+                amt%=5;
+            }
+        case 2:
+            {
+                notes=amt/2;
+                printf("no of 2 rs notes%d\n",notes);
+                amt%=2;
+            }
+        case 1:
+            {
+                notes=amt/1;
+                printf("no of 1 rs notes%d\n",notes);
+                amt%=1;
+            }
+        
+    }
+    return 0;
+}
