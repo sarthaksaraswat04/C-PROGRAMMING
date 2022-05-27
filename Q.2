@@ -1,0 +1,19 @@
+//binary to decimal
+#include <stdio.h>
+int main()
+{
+   int num,nsave,rem,j=1,d,dec=0;
+   printf("enter number");
+   scanf("%d",&num);
+   nsave=num;
+  while (num>0)
+   {
+       rem=num%10;
+       d=j*rem;
+       dec=dec+d;
+       j*=2;
+       num/=10;
+  }
+   printf("decimal value of %d is %d",nsave,dec);
+   return 0;
+}
